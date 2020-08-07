@@ -27,3 +27,52 @@ block content
         
         .hero__bottom-buttons
           button.scroll-down-btn Скролл
+    section.about
+      .container.about__container
+        .about__user
+          .user
+            .user__avatar
+              .user__avatar-style
+                +image("content/user.jpg", 'user__avatar-pic')
+            -
+              var userInfo = [
+                ["Проживаю:", "Новосибирск"],
+                ["Возраст:", "27 лет"],
+                ["Родился:", "1 января 1991"]
+              ];
+
+            table.user__avatar-data
+              each item in userInfo
+                tr.user__data-row
+                  td.user__data-title #{item[0]}
+                  td.user__data-content #{item[1]}
+        .about__content
+          .about__desc Привет, меня зовут
+          .about__title Владимир Астаханов
+          .about__text-info
+            p Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+          .about__ps
+            | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+  .middle-section
+    section.values
+      .container
+        .values__title
+          .values__title Чем я могу быть полезен вам
+          .values__content
+            p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+        .value__widget
+          -
+            var skillsCategories = [
+              ["Front-end", ["HTML5", "CSS3", "Javascript", "Jquery и Vue.js"]],
+              ["Workflow", ["GIT", "Terminal", "Gulp", "Webpack"]]
+            ];
+
+          ul.skills
+            each category in skillsCategories
+              li.skills__item
+                .skills-row
+                  .skills-row__title #{category[0]}
+                  ul.skills-row__list
+                    each skill in category[1]
+                      li.skills-row__item
+                        .skill #{skill}
