@@ -1,3 +1,39 @@
 .values {
-  background: url("~images/bg/skills-1800.jpg" ) center top / cover no-repeat;
+  position: relative;
+  padding-top: 144px;
+  background:
+    url("~images/bg/skills-1800.jpg" ) center top / cover no-repeat;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background: url("~images/bg/hands-1800.png" ) left bottom / cover no-repeat;
+    width: 490px;
+    height: 728px;
+    left: -87px;
+    bottom: -70px;
+  }
+}
+
+.values__title {
+  padding-left: 20%;
+}
+
+.values__title-text {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 41px;
+  margin: 39px;
+}
+
+.values__content {
+  font-weight: 600;
+  line-height: 30px;
+  color: rgba($text-color, .8);
+  margin-bottom: 93px;
+}
+
+.values__widget {
+  padding-left: 25%
 }
