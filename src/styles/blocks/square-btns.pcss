@@ -1,0 +1,31 @@
+.square-btns {
+  display: flex;
+  min-height: 35px;
+  flex-direction: column;
+}
+
+.square-btns .square-btns__item,
+.square-btns .square-btns__item {
+  width: 32px;
+  height: 32px;
+  background: #333C49;
+  position: relative;
+  &::before {
+    background: svg-load('arrow-down.svg', fill=$text-color, width=100%, height=100%) no-repeat;
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 10px;
+  }
+}
+.square-btns .square-btns__item--prev {
+
+  &::before {
+    background: svg-load('arrow-down.svg', fill=#717883, width=100%, height=100%) no-repeat;
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+}

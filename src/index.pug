@@ -83,3 +83,73 @@ block content
                               stop(offset="0%" stop-color="#dc9322")
                               stop(offset="100%" stop-color="#d0731b")
                           .skill__title #{skill}
+    section.works
+      .container.works__container
+        .section-title Мои работы
+        .works__content
+          .works-prewiew
+            .works-prewiew__pictures(data-slide="2")
+              +image("content/slider-1.jpg", "works-prewiew__img")
+              .works-prewiew__thumbs
+                ul.thumbs
+                  - for (var i = 0; i < 4; i++)
+                    li.thumbs__item
+                      a(href="").thumbs__link
+                        +image(`content/slider-${i+1}.jpg`, "thumbs__pic")
+              .works-prewiew__btns
+                .square-btns
+                  button(type="button").square-btns__item.square-btns__item--next
+                  button(type="button").square-btns__item.square-btns__item--prev
+            .works-prewiew__info
+              - var tags = ["HTML", "CSS", "Javascript"]
+              ul.tags
+                each item in tags
+                  li.tags__item
+                    .tag #{item}
+              .works-prewiew__title Сайт школы образования
+              .works-prewiew__description
+                p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+              a(href="#").iconed-link Посмотреть сайт
+  section.reviews
+    .container
+      .slider
+        .slider__header
+          .section-title.section-title--reviews Что обо мне говорят
+          .slider__buttons
+            button(type="button").round-btn.round-btn--poiner--right
+            button(type="button").round-btn.round-btn--poiner--left
+        ul.slider__content
+          li.slider__item
+            .quote
+              .quote__text
+                p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+              .quote__user
+                .user-display
+                  .user-display__avatar
+                  .user-display__avatar-style
+                    +image("content/user1.png", "user-display__pic")
+                  .user-display__data
+                    .user-display__name Ковальчук Дмитрий
+                    .user-display__occ Основатель Loftschool
+          li.slider__item
+            .quote
+              .quote__text
+                p Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+              .quote__user
+                .user-display
+                  .user-display__avatar
+                  .user-display__avatar-style
+                    +image("content/user2.png", "user-display__pic")
+                  .user-display__data
+                    .user-display__name Владимир Сабанцев
+                    .user-display__occ Преподаватель
+  
+  footer.footer
+    .container.footer__container
+      .footer__copyright
+        .footer__copyright-col
+          .footer__copyright-year &copy; 2020
+        .footer__copyright-userinfo
+
+
+

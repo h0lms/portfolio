@@ -1,0 +1,31 @@
+.round-btn {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border: 2px solid $text-color;
+  border-radius: 50%;
+  margin-right: 28px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &::before {
+    background: svg-load('arrow-right.svg', fill=$text-color, width=100%, height=100%) no-repeat;
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 10px;
+  }
+}
+
+.round-btn--poiner--left {
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+}
