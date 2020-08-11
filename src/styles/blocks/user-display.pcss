@@ -9,10 +9,15 @@
 .user-display__avatar-style {
   width: 75px;
   height: 75px;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
 .user-display__pic {
-  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .user-display__name {
